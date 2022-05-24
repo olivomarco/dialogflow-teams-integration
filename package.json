@@ -19,7 +19,7 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "insert url here"
+    "url": "https://github.com/olivomarco/dialogflow-teams-integration/"
   },
   "license": "Apache-2.0"
 }
