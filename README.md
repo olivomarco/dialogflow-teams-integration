@@ -1,4 +1,4 @@
-# Microsoft Teams Integration
+# Microsoft Teams Integration of DialogFlow bots
 
 Over time, many bots have been developed using DialogFlow framework from Google. Many of those who developed those bots would like to integrate them with Microsoft Teams. However, Google does not offer such integration scenario as of 2022, so this repo contains a viable approach in overcoming this gap.
 
@@ -113,3 +113,11 @@ and after clicking "Open in Teams" we will land in a chat with our bot, where we
 The magic is done: multicloud bot works, the response you see above in Teams was one that we inserted as a response to our intent "Who are you" in DialogFlow.
 
 For more information and details, please just have a look at code in the repo.
+
+## Security considerations
+
+Finally, a security consideration: our function is publicly accessible, having a public endpoint; also, it does not require any kind of authentication whatsoever.
+
+In a real world scenario, you want to add authentication so that your function requires a valid user before proceeding, and after authentication token is valided you can proceed with responding to your user.
+
+For information on how to configure Azure Bot service in order to use OAuth2 authentication, please refer to [this official document](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication) and modify your code accordingly: since it does not depend on DialogFlow-Teams integration, I'll leave it here as a remark.
