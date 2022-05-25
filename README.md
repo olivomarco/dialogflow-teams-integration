@@ -51,7 +51,9 @@ After that, in DialogFlow console we create a new project (`demodialogflowteams`
 
 ![DialogFlow intents](/images/intents.png)
 
-![DialogFlow "Who are you" intent detail](/images/intent_whoareyou.png)
+![DialogFlow "Who are you" intent phrases detail](/images/intent_whoareyou.png)
+
+![DialogFlow "Who are you" intent response detail](/images/intent_whoareyou2.png)
 
 That's it on GCP's side. Before deploying our Cloud Function, let's go and create Azure-side resources.
 
