@@ -21,7 +21,13 @@ const jsonToProto = require('./json_to_proto')
 module.exports = class DialogflowSessionClient {
 
   constructor(projectId){
-    this.sessionClient = new dialogflow.SessionsClient();
+    let config = {
+      credentials: {
+        private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/gm, '\n'),
+        client_email: process.env.GOOGLE_CLIENT_EMAIL
+      }
+    }
+    this.sessionClient = new dialogflow.SessionsClient(config);
     this.projectId = projectId;
   }
 

@@ -1,25 +1,14 @@
 {
-  "name": "teams-integration",
-  "version": "0.0.1",
-  "description": "A Teams bot with dialogflow integration.",
-  "main": "server.js",
+  "name": "dialogflow-teams-integration-azfunc",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "start": "node server.js",
-    "test": "mocha"
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
   },
   "dependencies": {
     "botbuilder": "^4.4.0",
-    "dialogflow": "0.6.0",
-    "express": "^4.16.4"
+    "dialogflow": "0.6.0"
   },
-  "devDependencies": {
-    "mocha": "6.1.4"
-  },
-  "engines": {
-    "node": "8.x"
-  },
-  "repository": {
-    "url": "https://github.com/olivomarco/dialogflow-teams-integration/"
-  },
-  "license": "Apache-2.0"
+  "devDependencies": {}
 }
