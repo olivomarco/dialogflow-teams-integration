@@ -14,7 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- const {ActivityTypes,
+
+require('dotenv').config();
+const {ActivityTypes,
   CardFactory,
   MessageFactory,
   BotFrameworkAdapter} = require('botbuilder');
@@ -24,12 +26,6 @@ const dialogflowSessionClient =
 const filterResponses = require('./botlib/filter_responses.js');
 const express = require('express');
 const app = express();
-
-//For authenticating dialogflow_session_client.js, create a Service Account and
-// download its key file. Set the environmental variable
-// GOOGLE_APPLICATION_CREDENTIALS to the key file's location.
-//See https://dialogflow.com/docs/reference/v2-auth-setup and
-// https://cloud.google.com/dialogflow/docs/setup for details.
 
 const projectId = process.env.GOOGLE_PROJECT_ID;
 const appId = process.env.MICROSOFT_APP_ID;
@@ -42,6 +38,13 @@ let adapter = new BotFrameworkAdapter({
   appId: appId,
   appPassword: appPassword,
   channelAuthTenant: process.env.MICROSOFT_TENANT_ID
+});
+
+const port = process.env.PORT;
+
+const listener = app.listen(port, () => {
+  console.log('Your Microsoft Teams integration server is listening on port '
+      + listener.address().port);
 });
 
 app.post('/', (req, res) => {
