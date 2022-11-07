@@ -6,6 +6,8 @@ In this document I will therefore outline the procedure to follow to integrate [
 
 Full code is also shared in this repo. Code was basically copied and adapted from [this code](https://github.com/GoogleCloudPlatform/dialogflow-integrations/tree/master/skype) also using knowledge from the comments inside [this Github issue](https://github.com/GoogleCloudPlatform/dialogflow-integrations/issues/43).
 
+**Guidance provided is completely unofficial, and not endorsed neither by Microsoft nor by Google or other parties.**
+
 ## Design
 
 Our users will use Microsoft Teams as the primary interface to talk with the bot. The bot will run on DialogFlow, and will use the Azure Bot from Microsoft to be able to receive commands and send responses to Teams.
